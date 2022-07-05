@@ -1,16 +1,19 @@
-// import "./App.css";
-
+import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
-import { MainPage } from "./pages";
+import { MainPage, JsPage, ReactPage, HtmlPage, CssPage } from "./pages";
 
 function App() {
   return (
     <>
       <Navbar />
       <MainPage />
-      {/* <div className='container mx-auto bg-gray-200 rounded-xl'>
-        <h1 className='text-3xl font-bold mb-5'>Hello world!</h1>
-      </div> */}
+      <Routes>
+        <Route path='/' element={<MainPage />} />
+        <Route path='/jsquestions' element={<JsPage />} />
+        <Route path='/cssquestions' element={<CssPage />} />
+        <Route path='/reactquestions' element={<ReactPage />} />
+        <Route path='/htmlquestions' element={<HtmlPage />} />
+      </Routes>
     </>
   );
 }

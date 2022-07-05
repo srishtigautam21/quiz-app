@@ -14,6 +14,7 @@ const MainPage = () => {
         </div>
         <img src={hero} alt='hero-img' />
       </div>
+      <div className='text-center font-extrabold text-2xl'>CATEGORIES</div>
       <div className='flex-col'>
         <div className='flex gap-2.5'>
           <div className='relative hover:shadow-lg shadow-gray-400/50'>
