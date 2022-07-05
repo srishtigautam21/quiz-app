@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <MainPage />
+      {/* <MainPage /> */}
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/jsquestions' element={<JsPage />} />
