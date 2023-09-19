@@ -1,0 +1,13 @@
+.quesBackground {
+  width: max-content;
+  height: max-content;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
