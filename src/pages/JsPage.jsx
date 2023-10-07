@@ -10,12 +10,28 @@ const JsPage = () => {
       {jsData.map((ques, index) => {
         return (
           <div className='quesBackground'>
-            <div>{ques.question}</div>
             <div>
-              <div>{ques.options.option1}</div>
-              <div>{ques.options.option2}</div>
-              <div>{ques.options.option3}</div>
-              <div>{ques.options.option4}</div>
+              {ques.id}. {ques.question}
+            </div>
+            <div className='inputWrapper'>
+              <label>
+                <input type='radio' />
+                {ques.options.option1}
+              </label>
+              <label>
+                <input type='radio' />
+                {ques.options.option2}
+              </label>
+
+              <label>
+                <input type='radio' />
+                {ques.options.option3}
+              </label>
+
+              <label>
+                <input type='radio' />
+                {ques.options.option4}
+              </label>
             </div>
           </div>
         );
