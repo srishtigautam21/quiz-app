@@ -1,0 +1,19 @@
+.quesBackground {
+  max-width: 700px;
+  height: max-content;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 20px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
