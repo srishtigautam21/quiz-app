@@ -43,10 +43,10 @@ const JsData = [
     options: [
       "JavaScript can manipulate cookies using the cookie property of the Document object.",
       "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
-      "Both of the above.",
-      "None of the above.",
+      "Both of the above",
+      "None of the above",
     ],
-    answer: "Both of the Above",
+    answer: "Both of the above",
   },
 ];
 
@@ -57,6 +57,46 @@ const HTMLData = [
       "Which of the following is used to read an HTML page and render it?",
     options: ["Web server", "Web network", "Web browser", "Web matrix"],
     answer: "Web Browser",
+  },
+  {
+    id: 2,
+    question: " What is HTML?",
+    options: [
+      "HTML describes the structure of a webpage",
+      "HTML is the standard markup language mainly used to create web pages",
+      "HTML consists of a set of elements that helps the browser how to view the content",
+      "All of the mentioned",
+    ],
+    answer: "All of the mentioned",
+  },
+  {
+    id: 3,
+    question: "What is the correct syntax of doctype in HTML5?",
+    options: [
+      "</doctype html>",
+      "<doctype html>",
+      "<doctype html!>",
+      "<!doctype html>",
+    ],
+    answer: "<!doctype html>",
+  },
+  {
+    id: 4,
+    question:
+      "Which of the following is not a difference between HTML and XHTML?",
+    options: [
+      "Charset in both html and xhtml is “text/html",
+      "Tags and attributes are case-insensitive in HTML but not in XHTML",
+      "Special characters must be escaped using character entities in XHTML unlike HTML",
+      "Charset in html is “text/html” where as in xhtml it is “application/xml+xhtml",
+    ],
+    answer: "Charset in both html and xhtml is “text/html",
+  },
+  {
+    id: 5,
+    question: "In which part of the HTML metadata is contained?",
+    options: ["head tag", "title tag", "html tag", "body tag"],
+    answer: "head tag",
   },
 ];
 
