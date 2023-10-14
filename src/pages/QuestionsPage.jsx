@@ -13,8 +13,13 @@ const QuestionsPage = () => {
   const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    if (quizType === "HTMLData") setData(HTMLData);
-    else if (quizType === "CSSData") setData(CSSData);
+    setData(localStorage.getItem("quizData"));
+  }, []);
+  useEffect(() => {
+    if (quizType === "HTMLData") {
+      // setData(HTMLData);
+      JSON.stringify(localStorage.setItem("quizData", HTMLData));
+    } else if (quizType === "CSSData") setData(CSSData);
     else if (quizType === "ReactData") setData(ReactData);
     else if (quizType === "JsData") setData(JsData);
   }, [quizType]);
@@ -36,8 +41,10 @@ const QuestionsPage = () => {
   };
   return (
     <div className='wrapper'>
-      <div>Score : {score} / 5 </div>
-
+      {/* <div className='text-2xl font-bold'>{quizType} Quiz</div> */}
+      <div className='bg-orange-100 px-2 py-1 rounded-md font-medium'>
+        Score : {score} / 5
+      </div>
       <div className='quesBackground'>
         <div className='text-xl font-bold'>
           {data[questionIndex].id}. {data[questionIndex].question}

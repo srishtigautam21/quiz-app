@@ -103,17 +103,101 @@ const HTMLData = [
 const CSSData = [
   {
     id: 1,
-    question: "vjxhbzjkz",
-    options: ["<javascript>", "<js>", "<script>", "<scripting>"],
-    answer: "<script>",
+    question: " What is CSS?",
+    options: [
+      "CSS is a style sheet language",
+      "CSS is designed to separate the presentation and content, including layout, colors, and fonts",
+      "CSS is the language used to style the HTML documents",
+      "All of the mentioned",
+    ],
+    answer: "All of the mentioned",
+  },
+  {
+    id: 2,
+    question:
+      "Which of the following CSS framework is used to create a responsive design?",
+    options: ["django", "rails", "larawell", "bootstrap"],
+    answer: "bootstrap",
+  },
+  {
+    id: 3,
+    question:
+      "Which of the following CSS style property is used to specify an italic text",
+    options: ["style", "font", "font-style", "@font-face"],
+    answer: "font-style",
+  },
+  {
+    id: 4,
+    question:
+      "Which of the following are the CSS Extension Prefixes for Webkit?",
+    options: ["-chrome", "-web", "-o-", "-webkit"],
+    answer: "-webkit",
+  },
+  {
+    id: 5,
+    question:
+      "Which of the following is the correct syntax to link an external style sheet in the HTML file?",
+    options: [
+      "<link rel=”stylesheet” href=”style.css” />",
+      "<link rel=”stylesheet” src=”style.css” />",
+      "<style rel=”stylesheet” src=”style.css” />",
+      "<style rel=”stylesheet” link=”style.css” />",
+    ],
+    answer: "<link rel=”stylesheet” href=”style.css” />",
   },
 ];
 const ReactData = [
   {
     id: 1,
-    question: "vjxhbzjkz",
-    options: ["<javascript>", "<js>", "<script>", "<scripting>"],
-    answer: "<script>",
+    question: "Which of the following command is used to create react-js-app ?",
+    options: [
+      "npx create-react-app appname",
+      "npm install create-react-app",
+      "npx install create-react-app -g",
+      "install - l create-react-app",
+    ],
+    answer: "npx create-react-app appname",
+  },
+  {
+    id: 2,
+    question:
+      "In React.js which one of the following is used to create a class for Inheritance ?",
+    options: ["Create", "Extends", "Inherits", "Delete"],
+    answer: "Extends",
+  },
+
+  {
+    id: 3,
+    question: "Which of the following is a way to handle data in React.js ?",
+    options: [
+      "State & Props",
+      "Services & Components",
+      "State & Services",
+      "State & Component",
+    ],
+    answer: "State & Props",
+  },
+  {
+    id: 4,
+    question: "Which of the following is true regarding Babel ?",
+    options: [
+      "Compiler",
+      "Transpilar",
+      "Both of the above",
+      "None of the above",
+    ],
+    answer: "Both of the above",
+  },
+  {
+    id: 5,
+    question: "Which of the following is true about key props ?",
+    options: [
+      "Key props are used to look beauty",
+      "Key prop is a way to identify the newly added element",
+      "It is one type of attribute of HTML",
+      "It is not used in the array",
+    ],
+    answer: "Key prop is a way to identify the newly added element",
   },
 ];
 export { JsData, HTMLData, CSSData, ReactData };

@@ -5,5 +5,4 @@ const store = configureStore({
     quiz: quizReducer,
   },
 });
-console.log("store", store);
 export default store;

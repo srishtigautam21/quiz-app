@@ -29,7 +29,6 @@ const MainPage = () => {
       <div className='flex-col'>
         <div className='flex gap-2.5'>
           <button
-            // to='/questions' //usenavigate
             onClick={() => {
               navigate("/questions");
               dispatch(setQuizType("HTMLData"));
@@ -40,21 +39,19 @@ const MainPage = () => {
             <div className='text-center font-semibold text-md'>HTML</div>
           </button>
           <button
-            className='flex flex-col  hover:shadow-lg shadow-gray-400/50'
+            className='justify-center align-middle   hover:shadow-lg shadow-gray-400/50'
             onClick={() => {
               navigate("/questions");
               dispatch(setQuizType("CSSData"));
             }}
           >
             <img className='max-w-xs h-80' src={prog2} alt='css-img' />
-            <div className='text-center align-text-bottom items-end font-semibold text-md'>
-              CSS
-            </div>
+            <div className='text-center  font-semibold text-md'>CSS</div>
           </button>
         </div>
         <div className='flex gap-2.5'>
           <button
-            className='flex flex-col  hover:shadow-lg shadow-gray-400/50'
+            className='hover:shadow-lg shadow-gray-400/50'
             onClick={() => {
               navigate("/questions");
               dispatch(setQuizType("JsData"));
@@ -66,8 +63,7 @@ const MainPage = () => {
             </div>
           </button>
           <button
-            // to='/questions'
-            className='flex flex-col  hover:shadow-lg shadow-gray-400/50'
+            className='hover:shadow-lg shadow-gray-400/50'
             onClick={() => {
               navigate("/questions");
               dispatch(setQuizType("ReactData"));
