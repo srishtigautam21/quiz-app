@@ -12,17 +12,22 @@ const QuestionsPage = () => {
   const [data, setData] = useState(JsData);
   const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
-  useEffect(() => {
-    setData(localStorage.getItem("quizData"));
-  }, []);
+
   useEffect(() => {
     if (quizType === "HTMLData") {
-      // setData(HTMLData);
-      JSON.stringify(localStorage.setItem("quizData", HTMLData));
-    } else if (quizType === "CSSData") setData(CSSData);
-    else if (quizType === "ReactData") setData(ReactData);
-    else if (quizType === "JsData") setData(JsData);
+      localStorage.setItem("quizData", JSON.stringify(HTMLData));
+    } else if (quizType === "CSSData") {
+      localStorage.setItem("quizData", JSON.stringify(CSSData));
+    } else if (quizType === "ReactData") {
+      localStorage.setItem("quizData", JSON.stringify(ReactData));
+    } else if (quizType === "JsData") {
+      localStorage.setItem("quizData", JSON.stringify(JsData));
+    }
   }, [quizType]);
+
+  useEffect(() => {
+    setData(JSON.parse(localStorage.getItem("quizData")));
+  }, []);
 
   console.log(questionIndex, score, quizType);
   const handleAnswers = () => {
