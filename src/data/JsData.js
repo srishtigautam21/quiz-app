@@ -56,7 +56,7 @@ const HTMLData = [
     question:
       "Which of the following is used to read an HTML page and render it?",
     options: ["Web server", "Web network", "Web browser", "Web matrix"],
-    answer: "Web Browser",
+    answer: "Web browser",
   },
   {
     id: 2,

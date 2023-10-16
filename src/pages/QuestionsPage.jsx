@@ -29,19 +29,17 @@ const QuestionsPage = () => {
     setData(JSON.parse(localStorage.getItem("quizData")));
   }, []);
 
-  console.log(questionIndex, score, quizType);
   const handleAnswers = () => {
     if (questionIndex === data.length - 1) {
       navigate("/scores");
     } else {
       dispatch(setQuesIndex());
-      console.log("answer", answer);
-      // setAnswer("");
     }
   };
   const checkAnswer = () => {
     if (answer === data[questionIndex].answer) {
       dispatch(setScore(false));
+      setAnswer("");
     }
   };
   return (
@@ -69,22 +67,36 @@ const QuestionsPage = () => {
           ))}
         </div>
       </div>
-      {/* <button
-        onClick={() => checkAnswer()}
-        className=' bg-cyan-900 text-white shadow-lg shadow-gray-400/50 px-3 py-0.5 rounded-md hover:bg-cyan-700'
-      >
-        Let's Check
-      </button> */}
-      <button
-        type='button'
-        onClick={() => {
-          handleAnswers();
-          checkAnswer();
-        }}
-        className=' bg-cyan-900 text-white shadow-lg shadow-gray-400/50 px-3 py-0.5 rounded-md hover:bg-cyan-700'
-      >
-        {questionIndex === data.length - 1 ? "View Score" : "Next"}
-      </button>
+      {!!answer ? (
+        <button
+          type='button'
+          onClick={() => {
+            handleAnswers();
+            checkAnswer();
+          }}
+          className=' bg-cyan-900 text-white shadow-lg shadow-gray-400/50 px-3 py-0.5 rounded-md hover:bg-cyan-700'
+        >
+          {questionIndex === data.length - 1 ? "View Score" : "Next"}
+        </button>
+      ) : (
+        <button
+          className=' bg-cyan-900 text-white shadow-lg shadow-gray-400/50 px-3 py-0.5 rounded-md cursor-not-allowed'
+          disabled
+        >
+          {questionIndex === data.length - 1 ? "View Score" : "Next"}
+        </button>
+      )}
+
+      {/* // <button
+      //   type='button'
+      //   onClick={() => {
+      //     handleAnswers();
+      //     checkAnswer();
+      //   }}
+      //   className=' bg-cyan-900 text-white shadow-lg shadow-gray-400/50 px-3 py-0.5 rounded-md hover:bg-cyan-700'
+      // >
+      //   {questionIndex === data.length - 1 ? "View Score" : "Next"}
+      // </button> */}
     </div>
   );
 };
